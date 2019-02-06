@@ -14,4 +14,6 @@ prototype(Webandco.Fusion:Component.Editable) < prototype(Webandco.Fusion:Compon
         @process.makeEditable.@if.editable = ${props.isEditable == true}
         @process.makeEditable.property = ${props.property + props.postfix}
     }
+
+    @if.show = ${props[this.property] != false}
 }

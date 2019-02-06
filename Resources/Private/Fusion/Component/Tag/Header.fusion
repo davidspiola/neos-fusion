@@ -1,13 +1,8 @@
 prototype(Webandco.Fusion:Component.Tag.Header) < prototype(Webandco.Fusion:Component) {
 
     bemClass = 'header'
-    bemModifier = Webandco.Fusion:BemModifier
-
     headline = 'must-be-set'
-    headlineBemClass = 'header__headline'
-
-    subline = 'must-be-set'
-    sublineBemClass = 'header__subline'
+    lead = 'must-be-set'
 
     @styleguide {
         title = 'Tag: header'
@@ -22,18 +17,14 @@ prototype(Webandco.Fusion:Component.Tag.Header) < prototype(Webandco.Fusion:Comp
 
         content = Webandco.Fusion:Component.Tag.Header.Content {
             headline = Webandco.Fusion:Component.Element.Headline {
-                bemClass = ${props.headlineBemClass}
-                bemModifier = Webandco.Fusion:BemModifier
+                bemClass = ${props.bemClass + '__headline'}
                 content = ${props.headline}
-
-                @if.render = ${!Type.isBoolean(props.headline)}
             }
-            subline = Webandco.Fusion:Component.Element.Subline {
-                bemClass = ${props.sublineBemClass}
-                bemModifier = Webandco.Fusion:BemModifier
-                content = ${props.subline}
-
-                @if.render = ${!Type.isBoolean(props.subline)}
+            lead = Webandco.Fusion:Component.Element.Message {
+                property = 'lead'
+                tagName = 'em'
+                bemClass = ${props.bemClass + '__lead'}
+                content = ${props.lead}
             }
         }
     }

@@ -15,6 +15,10 @@ prototype(Webandco.Fusion:Component.Tag) < prototype(Neos.Fusion:Tag) {
     // assign additional css classes
     attributes.class.@process.cssClass = ${String.isBlank(String.trim(props.cssClass)) ? value : String.trim(value + ' ' + props.cssClass)}
 
+    // assign style
+    attributes.style = ${props.cssStyle}
+    attributes.style.@if.isset = ${props.cssStyle != false && !String.isBlank(String.trim(props.cssStyle))}
+
     // assign component content
     content = ${props.content}
 }

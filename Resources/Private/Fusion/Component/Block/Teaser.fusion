@@ -42,7 +42,6 @@ prototype(Webandco.Fusion:Component.Block.Teaser) < prototype(Webandco.Fusion:Co
             subline = Webandco.Fusion:Component.Element.Subline {
                 bemClass = ${props.bemClass + '__subline'}
                 content = ${props.subline}
-                @if.showSubline = ${props.subline != false}
             }
 
             link = Webandco.Fusion:Component.Tag.A {
@@ -50,8 +49,6 @@ prototype(Webandco.Fusion:Component.Block.Teaser) < prototype(Webandco.Fusion:Co
                 linkText   = ${props.linkText}
                 linkHref   = ${props.linkHref}
                 linkTarget = ${props.linkTarget}
-
-                @if.showLink = ${props.linkHref != false}
             }
         }
     }

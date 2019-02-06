@@ -1,12 +1,9 @@
 prototype(Webandco.Fusion:Component.Tag.Article) < prototype(Webandco.Fusion:Component) {
 
     bemClass = 'article'
-    bemModifier = Webandco.Fusion:BemModifier
-
     headline = 'must-be-set'
     lead = 'must-be-set'
     content = Webandco.Fusion:Component.Tag.Article.Content
-
 
     @styleguide {
         title = 'Tag: article'
@@ -33,7 +30,7 @@ prototype(Webandco.Fusion:Component.Tag.Article) < prototype(Webandco.Fusion:Com
             picture = Webandco.Fusion:Component.Tag.Picture
             header = Webandco.Fusion:Component.Tag.Header {
                 headline = ${props.headline}
-                subline = ${props.lead}
+                lead = ${props.lead}
             }
             content = ${props.content}
         }

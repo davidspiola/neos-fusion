@@ -1,8 +1,6 @@
 prototype(Webandco.Fusion:Component.Tag.Img) < prototype(Webandco.Fusion:Component) {
 
     bemClass = 'image'
-    bemModifier = Webandco.Fusion:BemModifier
-
     imageSrc = 'must-be-set'
     imageWidth = null
     imageHeight = null

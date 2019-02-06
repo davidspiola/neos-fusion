@@ -1,8 +1,5 @@
 prototype(Webandco.Fusion:Component.Tag.Source) < prototype(Webandco.Fusion:Component) {
 
-    //has no bem functionality
-    bemClass = ''
-
     media = ''
     cssClass = ''
     imageSrc = 'must-be-set'

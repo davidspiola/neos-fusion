@@ -1,7 +1,7 @@
 prototype(Webandco.Fusion:Component.Tag.Section) < prototype(Webandco.Fusion:Component) {
 
+    tagName = 'section'
     bemClass = 'section-content'
-    bemModifier = Webandco.Fusion:BemModifier
     content = Neos.Neos:ContentCollectionRenderer
 
     @styleguide {
@@ -12,8 +12,6 @@ prototype(Webandco.Fusion:Component.Tag.Section) < prototype(Webandco.Fusion:Com
     }
 
     renderer = Webandco.Fusion:Component.Tag.Section.Tag {
-        tagName = 'section'
-
         content = Webandco.Fusion:Component.Tag.Section.Body {
             content = ${props.content}
         }

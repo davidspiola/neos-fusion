@@ -1,2 +1,3 @@
 include: Utility/*
 include: Component/**/*
+include: Content/**/*
