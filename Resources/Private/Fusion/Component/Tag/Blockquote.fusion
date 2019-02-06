@@ -1,0 +1,33 @@
+prototype(Webandco.Fusion:Component.Tag.Blockquote) < prototype(Webandco.Fusion:Component) {
+    tagName = 'blockquore'
+    bemClass = 'blockquote'
+    message = 'must-be-set'
+    author = 'must-be-set'
+
+    @styleguide {
+        title = 'Tag: blockquote'
+        props {
+            message = 'Message'
+            author = 'Author'
+        }
+    }
+
+    renderer = Webandco.Fusion:Component.Tag {
+        content = Neos.Fusion:Join {
+            message = Webandco.Fusion:Component.Element.Message {
+                tagName = 'p'
+                bemClass = ${props.bemClass + '__message'}
+                content = ${props.message}
+            }
+            author = Webandco.Fusion:Component.Element.Message {
+                tagName = 'footer'
+                property = 'author'
+                bemClass = ${props.bemClass + '__author'}
+                cssClass = 'blockquote-footer'
+                content = ${props.author}
+            }
+        }
+    }
+}
+
+

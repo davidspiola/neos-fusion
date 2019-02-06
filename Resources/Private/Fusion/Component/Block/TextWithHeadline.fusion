@@ -1,0 +1,34 @@
+prototype(Webandco.Fusion:Component.Block.TextWithHeadline) < prototype(Webandco.Fusion:Component) {
+
+    bemClass = 'twh'
+
+    text = 'must-be-set'
+    headline = 'must-be-set'
+
+    @styleguide {
+        title = 'Text with Image'
+        props {
+            headline = 'some headline'
+            text = '... some text...'
+        }
+    }
+
+    renderer = Webandco.Fusion:Component.Tag {
+        content = afx`
+        <div @key="headline">
+            <Webandco.Fusion:Component.Element.Headline
+                tagName='h2'
+                bemClass={props.bemClass + '__headline'}
+                content={props.headline}
+            />
+        </div>
+        <div @key="text">
+            <Webandco.Fusion:Component.Element.Text
+                tagName='div'
+                bemClass={props.bemClass + '__text'}
+                content={props.text}
+            />
+        </div>
+        `
+    }
+}
