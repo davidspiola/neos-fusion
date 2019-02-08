@@ -35,11 +35,13 @@ prototype(Webandco.Fusion:Component.Block.Teaser) < prototype(Webandco.Fusion:Co
             }
 
             headline = Webandco.Fusion:Component.Element.Headline {
+                tagName = 'h2'
                 bemClass = ${props.bemClass + '__headline'}
                 content = ${props.headline}
             }
 
             subline = Webandco.Fusion:Component.Element.Subline {
+                tagName = 'h3'
                 bemClass = ${props.bemClass + '__subline'}
                 content = ${props.subline}
             }
