@@ -6,7 +6,6 @@ prototype(Webandco.Fusion:Component.Element.Headline) < prototype(Webandco.Fusio
         title = 'Headline'
         props {
             content = 'Headline'
-            bemClass = 'headline'
         }
     }
 }

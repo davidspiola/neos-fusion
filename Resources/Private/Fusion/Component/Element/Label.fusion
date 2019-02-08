@@ -5,8 +5,7 @@ prototype(Webandco.Fusion:Component.Element.Label) < prototype(Webandco.Fusion:C
     @styleguide {
         title = 'Label'
         props {
-            content = 'label text...'
-            bemClass = 'label'
+            content = 'a short message without paragraph'
         }
     }
 }

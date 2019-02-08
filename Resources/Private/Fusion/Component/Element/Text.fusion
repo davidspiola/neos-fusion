@@ -6,7 +6,6 @@ prototype(Webandco.Fusion:Component.Element.Text) < prototype(Webandco.Fusion:Co
         title = 'Text'
         props {
             content = 'Some text...'
-            bemClass = 'text'
         }
     }
 }

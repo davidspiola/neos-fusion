@@ -5,8 +5,7 @@ prototype(Webandco.Fusion:Component.Element.Message) < prototype(Webandco.Fusion
     @styleguide {
         title = 'Message'
         props {
-            content = 'Some message...'
-            bemClass = 'message'
+            content = 'A message without paragraph'
         }
     }
 }
