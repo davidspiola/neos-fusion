@@ -3,3 +3,25 @@ Neos:
     fusion:
       autoInclude:
         'Webandco.Fusion': TRUE
+Sitegeist:
+  Monocle:
+    ui:
+      structure:
+        element:
+          position: 100
+          match: Component?\.Element
+          label: Element
+          icon: icon-minus
+          color: '#AAA'
+        block:
+          position: 200
+          match: Component?\.Block
+          label: Block
+          icon: icon-gear
+          color: '#AAA'
+        module:
+          position: 300
+          match: Component?\.Module
+          label: Module
+          icon: icon-certificate
+          color: '#AAA'
