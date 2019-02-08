@@ -8,27 +8,23 @@ prototype(Webandco.Fusion:Component.Block.TextWithHeadline) < prototype(Webandco
     @styleguide {
         title = 'Text with Image'
         props {
-            headline = 'some headline'
-            text = '... some text...'
+            headline = 'Headline'
+            text = 'Some text...'
         }
     }
 
     renderer = Webandco.Fusion:Component.Tag {
         content = afx`
-        <div @key="headline">
             <Webandco.Fusion:Component.Element.Headline
                 tagName='h2'
                 bemClass={props.bemClass + '__headline'}
                 content={props.headline}
             />
-        </div>
-        <div @key="text">
             <Webandco.Fusion:Component.Element.Text
                 tagName='div'
                 bemClass={props.bemClass + '__text'}
                 content={props.text}
             />
-        </div>
         `
     }
 }
