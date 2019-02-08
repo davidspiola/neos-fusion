@@ -3,6 +3,7 @@ prototype(Webandco.Fusion:Component.Block.TextWithImage) < prototype(Webandco.Fu
     bemClass = 'twi'
 
     text = 'must-be-set'
+    headline = 'must-be-set'
     imageSrc = 'must-be-set'
     imageAlt = 'must-be-set'
     imageTitle = 'must-be-set'
@@ -10,7 +11,8 @@ prototype(Webandco.Fusion:Component.Block.TextWithImage) < prototype(Webandco.Fu
     @styleguide {
         title = 'Text with Image'
         props {
-            text = '... some text...'
+            headline = 'Headline'
+            text = 'Some text...'
         }
     }
 
@@ -25,6 +27,11 @@ prototype(Webandco.Fusion:Component.Block.TextWithImage) < prototype(Webandco.Fu
             />
         </div>
         <div @key="text">
+            <Webandco.Fusion:Component.Element.Headline
+                bemClass={props.bemClass + '__headline'}
+                tagName="h3"
+                content={props.headline}
+            />
             <Webandco.Fusion:Component.Element.Text
                 bemClass={props.bemClass + '__text'}
                 tagName="div"
