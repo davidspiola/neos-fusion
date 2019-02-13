@@ -22,7 +22,7 @@ prototype(Webandco.Fusion:Component.Tag.Header) < prototype(Webandco.Fusion:Comp
             }
             lead = Webandco.Fusion:Component.Element.Message {
                 property = 'lead'
-                tagName = 'em'
+                tagName = 'p'
                 bemClass = ${props.bemClass + '__lead'}
                 content = ${props.lead}
             }
