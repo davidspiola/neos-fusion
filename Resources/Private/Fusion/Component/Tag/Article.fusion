@@ -1,21 +1,12 @@
 prototype(Webandco.Fusion:Component.Tag.Article) < prototype(Webandco.Fusion:Component) {
 
     bemClass = 'article'
-    headline = 'must-be-set'
-    lead = 'must-be-set'
     content = Webandco.Fusion:Component.Tag.Article.Content
 
     @styleguide {
         title = 'Tag: article'
         props {
-            lead = 'Article lead text'
-            author = 'Article author'
-            content = Webandco.Fusion:Component.Tag.Article.Content {
-                0 = Webandco.Fusion:Component.Element.Headline {
-                    tagName = 'h2'
-                }
-                1 = Webandco.Fusion:Component.Element.Text
-            }
+            content = 'content'
         }
     }
 
@@ -27,11 +18,6 @@ prototype(Webandco.Fusion:Component.Tag.Article) < prototype(Webandco.Fusion:Com
         attributes.itemid = 'article'
 
         content = Webandco.Fusion:Component.Tag.Article.Body {
-            picture = Webandco.Fusion:Component.Tag.Picture
-            header = Webandco.Fusion:Component.Tag.Header {
-                headline = ${props.headline}
-                lead = ${props.lead}
-            }
             content = ${props.content}
         }
     }
