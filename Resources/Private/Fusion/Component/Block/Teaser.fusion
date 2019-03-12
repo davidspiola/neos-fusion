@@ -25,33 +25,32 @@ prototype(Webandco.Fusion:Component.Block.Teaser) < prototype(Webandco.Fusion:Co
     }
 
     renderer = Webandco.Fusion:Component.Tag {
-        content = Neos.Fusion:Array {
-            image = Webandco.Fusion:Component.Tag.Img {
-                bemClass = ${props.bemClass + '__image'}
-                imageSrc = ${props.imageSrc}
-                imageAlt = ${props.imageSrc}
-                imageTitle = ${props.imageSrc}
-                @if.showImage = ${props.imageSrc != false}
-            }
-
-            headline = Webandco.Fusion:Component.Element.Headline {
-                tagName = 'h2'
-                bemClass = ${props.bemClass + '__headline'}
-                content = ${props.headline}
-            }
-
-            subline = Webandco.Fusion:Component.Element.Subline {
-                tagName = 'h3'
-                bemClass = ${props.bemClass + '__subline'}
-                content = ${props.subline}
-            }
-
-            link = Webandco.Fusion:Component.Tag.A {
-                bemClass = ${props.bemClass + '__link'}
-                linkText   = ${props.linkText}
-                linkHref   = ${props.linkHref}
-                linkTarget = ${props.linkTarget}
-            }
-        }
+        content = afx`
+            <Webandco.Fusion:Component.Tag.Img @key='image'
+                bemClass={props.bemClass + '__image'}
+                imageSrc={props.imageSrc}
+                imageAlt={props.imageSrc}
+                imageTitle={props.imageSrc}
+                @if.showImage={props.imageSrc != false}
+            />
+            <Webandco.Fusion:Component.Element.Headline @key='headline'
+                tagName='h2'
+                bemClass={props.bemClass + '__headline'}
+                cssClass='m-3'
+                content={props.headline}
+            />
+            <Webandco.Fusion:Component.Element.Subline @key='subline'
+                tagName='h2'
+                bemClass={props.bemClass + '__subline'}
+                cssClass='m-3'
+                content={props.subline}
+            />
+            <Webandco.Fusion:Component.Tag.A @key='link'
+                bemClass={props.bemClass + '__link'}
+                linkText={props.linkText}
+                linkHref={props.linkHref}
+                linkTarget={props.linkTarget}
+            />
+        `
     }
 }
