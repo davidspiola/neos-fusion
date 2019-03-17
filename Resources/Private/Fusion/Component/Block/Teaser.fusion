@@ -29,8 +29,8 @@ prototype(Webandco.Fusion:Component.Block.Teaser) < prototype(Webandco.Fusion:Co
             <Webandco.Fusion:Component.Tag.Img @key='image'
                 bemClass={props.bemClass + '__image'}
                 imageSrc={props.imageSrc}
-                imageAlt={props.imageSrc}
-                imageTitle={props.imageSrc}
+                imageAlt={props.imageAlt}
+                imageTitle={props.imageTitle}
                 @if.showImage={props.imageSrc != false}
             />
             <Webandco.Fusion:Component.Element.Headline @key='headline'
