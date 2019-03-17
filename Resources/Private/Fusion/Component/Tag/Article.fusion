@@ -1,5 +1,5 @@
 prototype(Webandco.Fusion:Component.Tag.Article) < prototype(Webandco.Fusion:Component) {
-
+    tagName = 'article'
     bemClass = 'article'
     content = Webandco.Fusion:Component.Tag.Article.Content
 
@@ -11,7 +11,6 @@ prototype(Webandco.Fusion:Component.Tag.Article) < prototype(Webandco.Fusion:Com
     }
 
     renderer = Webandco.Fusion:Component.Tag {
-        tagName = 'article'
 
         // assign schema.org information
         attributes.itemtype = 'http://schema.org/Article'
