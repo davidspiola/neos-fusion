@@ -1,0 +1,21 @@
+prototype(Webandco.Fusion:Component.Tag.Main) < prototype(Webandco.Fusion:Component) {
+    tagName = 'main'
+    bemClass = 'main'
+    content = Webandco.Fusion:Component.Tag.Main.Content
+
+    @styleguide {
+        title = 'Tag: main'
+        props {
+            content = 'content'
+        }
+    }
+
+    renderer = Webandco.Fusion:Component.Tag {
+        content = Webandco.Fusion:Component.Tag.Main.Body {
+            content = ${props.content}
+        }
+    }
+}
+
+prototype(Webandco.Fusion:Component.Tag.Main.Content) < prototype(Neos.Fusion:Array)
+prototype(Webandco.Fusion:Component.Tag.Main.Body) < prototype(Neos.Fusion:Array)

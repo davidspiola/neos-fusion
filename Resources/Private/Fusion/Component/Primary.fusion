@@ -1,0 +1,3 @@
+prototype(Webandco.Fusion:Primary) < prototype(Neos.Fusion:Join) {
+    
+}

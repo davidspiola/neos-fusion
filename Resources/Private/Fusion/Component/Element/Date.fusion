@@ -1,0 +1,30 @@
+prototype(Webandco.Fusion:Component.Element.Date) < prototype(Webandco.Fusion:Component) {
+    tagName = 'div'
+    property = 'date'
+
+    format = 'MMMM d yy'
+    local = 'en'
+
+    @styleguide {
+        title = 'Date'
+        props {
+            date = '01-01-1970'
+            format = 'MMMM d yy'
+        }
+    }
+
+    renderer = Webandco.Fusion:Component.Tag {
+        content = Neos.Fusion:Case {
+            
+            dateObject {
+                condition = ${Type.isObject(props.date)}
+                renderer = ${Date.formatCldr(props.date, props.format, props.local)}
+            }
+
+            default {
+                condition = 'true'
+                renderer = ${props.date}
+            }
+        }
+    }
+}
