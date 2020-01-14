@@ -67,6 +67,14 @@ prototype(Webandco.Fusion:Component.Tag.A.Href) < prototype(Neos.Fusion:Componen
             }
         }
 
+        asset {
+            condition = ${Type.isString(props.linkHref) && String.indexOf(props.linkHref, 'asset')  >= 0 && props.linkEnabled}
+            renderer = ${props.linkHref}
+            renderer.@process.convertUris = Neos.Neos:ConvertUris {
+                forceConversion = true
+            }
+        }
+
         resource {
             condition = ${String.indexOf(props.linkHref, 'resource') >= 0 && props.linkEnabled}
             renderer = Neos.Fusion:ResourceUri {
